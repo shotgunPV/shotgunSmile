@@ -24,9 +24,9 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 35vh;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
     header h1 {
@@ -42,9 +42,9 @@ header {
 /* Logo Styles */
 #logo {
     height: auto; /* Maintain aspect ratio */
-    width: 50%; /* Ensure it scales relative to its parent container */
+    width: 100%; /* Ensure it scales relative to its parent container */
     max-width: 50em; /* A relative unit to ensure scaling */
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 
@@ -53,7 +53,7 @@ header {
 /* Main Navigation Styles */
 #main-nav {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px;
+    padding: 1px;
     border-radius: 5px;
     margin-bottom: 20px; /* Add space between main and social nav */
     text-align: center;
@@ -74,7 +74,7 @@ header {
 #social-nav {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     margin-bottom: 20px;
@@ -115,13 +115,13 @@ footer {
 
 /* Section Styles */
 main {
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
 section {
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid var(--black);
     background-color: #2e2e2e; /* Slightly lighter grey */
     border-radius: 10px;
