@@ -1,0 +1,250 @@
+﻿/* Color Variables */
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --green: #008000; /* Adjust if this isn't the exact shade */
+    --blue: #1877F2; /* Facebook blue */
+    --red: #FF0000; /* YouTube red */
+    --orange: #FF5500; /* SoundCloud orange */
+}
+
+/* Global Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    padding: 20px;
+}
+
+    header h1 {
+        font-size: 2.5em;
+        margin: 10px 0;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin: 5px 0 20px;
+    }
+
+/* Logo Styles */
+#logo {
+    height: auto; /* Maintain aspect ratio */
+    width: 50%; /* Ensure it scales relative to its parent container */
+    max-width: 50em; /* A relative unit to ensure scaling */
+    margin: 20px 0;
+}
+
+
+
+
+/* Main Navigation Styles */
+#main-nav {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Add space between main and social nav */
+    text-align: center;
+}
+
+    #main-nav a {
+        color: var(--white);
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.2em;
+    }
+
+        #main-nav a:hover {
+            color: var(--green);
+        }
+
+/* Social Navigation Styles */
+#social-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    margin-bottom: 20px;
+}
+
+    #social-nav a {
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.2em;
+    }
+
+        #social-nav a[href*="facebook"] {
+            color: var(--blue);
+        }
+
+        #social-nav a[href*="youtube"] {
+            color: var(--red);
+        }
+
+        #social-nav a[href*="soundcloud"] {
+            color: var(--orange);
+        }
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--black);
+}
+
+#footer-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Section Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--black);
+    background-color: #2e2e2e; /* Slightly lighter grey */
+    border-radius: 10px;
+}
+
+    section h2 {
+        color: var(--green);
+        font-size: 2em;
+    }
+
+/* Table Styles (Gig History) */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: var(--white);
+}
+
+    table th, table td {
+        padding: 10px;
+        border: 1px solid var(--black);
+        text-align: left;
+    }
+
+    table th {
+        background-color: var(--green);
+        color: var(--white);
+    }
+
+    table tr:nth-child(even) {
+        background-color: var(--black);
+    }
+
+/* Form Styles (Contact Us Page) */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+}
+
+    form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--green);
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--green);
+        }
+
+    form button {
+        background-color: var(--green);
+        color: var(--white);
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+    }
+
+        form button:hover {
+            background-color: #005a00;
+        }
+
+/* Responsive Styles for Mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    header p {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    #main-nav a {
+        margin: 0 5px;
+        font-size: 1em;
+    }
+
+    #social-nav a {
+        margin: 0 5px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+        section h2 {
+            font-size: 1.5em;
+        }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+        form input, form textarea, form button {
+            padding: 8px;
+            font-size: 0.9em;
+        }
+
+    #footer-logo {
+        width: 80px; /* Adjust width for smaller screens */
+    }
+}
