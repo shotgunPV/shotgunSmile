@@ -248,3 +248,51 @@ form {
         width: 80px; /* Adjust width for smaller screens */
     }
 }
+
+/* Band Members Grid */
+.band-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Reduce space between grid items */
+    justify-items: center;
+    margin: 20px auto;
+    max-width: 500px; /* Adjust as needed */
+}
+
+.band-member {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+    .band-member img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top; /* Adjust the cropping to show more of the faces */
+    }
+
+    .band-member:hover {
+        transform: scale(1.45);
+    }
+
+    .band-member h3 {
+        color: var(--white);
+        margin-top: 10px;
+        font-size: 1em;
+        text-align: center;
+    }
+
+/* Specific adjustment for Dave's image */
+#dave img {
+    object-position: center top; /* Adjust to focus on top center */
+    transform: scale(1.8); /* Zoom in on Dave's image */
+}
+
+#dave:hover img {
+    transform: scale(1.4); /* Add a slightly larger zoom effect on hover if desired */
+}
