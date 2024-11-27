@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('assets/Data/gigHistory.csv') // Ensure path is correct and case-sensitive
+    fetch('assets/Data/gig-history.csv') // Ensure path is correct and case-sensitive
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
