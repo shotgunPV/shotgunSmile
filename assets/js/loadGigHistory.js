@@ -8,11 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             const rows = data.split('\n').slice(1); // Skip the header row
-            const gigs = rows.map((row, index) => {
+            let gigs = rows.map((row, index) => {
                 const [gigNumber, date, venue] = row.split(',');
                 const formattedDate = formatDate(date?.trim()); // Format the date
-                return { number: gigNumber?.trim(), date: formattedDate, venue: venue?.trim() };
+                return { number: gigNumber?.trim(), date: date?.trim(), formattedDate, venue: venue?.trim() };
             });
+
+            // Sort gigs by date in descending order
+            gigs.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             // Check if gig history table exists
             const gigHistoryTable = document.getElementById('gig-history-table');
@@ -22,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
                         <td>${gig.number}</td>
-                        <td>${gig.date}</td>
+                        <td>${gig.formattedDate}</td>
                         <td>${gig.venue}</td>
                     `;
                     tbody.appendChild(tr);
