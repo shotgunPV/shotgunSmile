@@ -2,6 +2,7 @@ class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="favicon.ico">
         <nav id="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -20,7 +21,7 @@ class SpecialFooter extends HTMLElement {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
             .fa-facebook, .fa-youtube, .fa-soundcloud {
-                font-size: 200%; /* Increase the size of the icons */
+                font-size: 200%;
             }
         </style>
         <p>Punkhub! Proudly serving the best punk in Portsmouth to the best pubs in Portsmouth!</p>
