@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('assets/Data/gig-history.csv') // Ensure path is correct and case-sensitive
+    fetch('assets/Data/gigHistory.csv') // Ensure the correct path and case-sensitivity
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -8,19 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             const rows = data.split('\n').slice(1); // Skip the header row
-            const gigs = rows.map(row => {
-                const [date, venue, notes] = row.split(',');
-                return { date: date?.trim(), venue: venue?.trim(), notes: notes?.trim() }; // Using optional chaining and trim
+            const gigs = rows.map((row, index) => {
+                const [gigNumber, date, venue] = row.split(',');
+                const formattedDate = formatDate(date?.trim()); // Format the date
+                return { number: gigNumber?.trim(), date: formattedDate, venue: venue?.trim() };
             });
 
-            // Populate gig history
-            const gigHistoryContainer = document.getElementById('gig-history-list');
-            if (gigHistoryContainer) {
+            // Check if gig history table exists
+            const gigHistoryTable = document.getElementById('gig-history-table');
+            if (gigHistoryTable) {
+                const tbody = gigHistoryTable.querySelector('tbody');
                 gigs.forEach(gig => {
-                    const formattedDate = formatDate(gig.date);
-                    const div = document.createElement('div');
-                    div.innerHTML = `<p>${formattedDate} at ${gig.venue} - ${gig.notes}</p>`;
-                    gigHistoryContainer.appendChild(div);
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${gig.number}</td>
+                        <td>${gig.date}</td>
+                        <td>${gig.venue}</td>
+                    `;
+                    tbody.appendChild(tr);
                 });
             }
         })
@@ -28,12 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function formatDate(dateStr) {
+    if (!dateStr) return 'Invalid Date';
     const dateObj = new Date(dateStr);
+    if (isNaN(dateObj)) return dateStr; // Return the original date string if it's not a valid date
     const day = dateObj.getDate();
     const suffix = getOrdinalSuffix(day);
     const options = { month: 'long', year: 'numeric' };
-    const formattedDate = `${day}${suffix} ${dateObj.toLocaleDateString('en-GB', options)}`;
-    return formattedDate;
+    const monthAndYear = dateObj.toLocaleDateString('en-GB', options);
+    return `${day}${suffix} ${monthAndYear}`;
 }
 
 function getOrdinalSuffix(day) {

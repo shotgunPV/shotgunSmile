@@ -47,9 +47,6 @@ header {
     margin: 5px 0;
 }
 
-
-
-
 /* Main Navigation Styles */
 #main-nav {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -132,29 +129,6 @@ section {
         font-size: 2em;
     }
 
-/* Table Styles (Gig History) */
-table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    color: var(--white);
-}
-
-    table th, table td {
-        padding: 10px;
-        border: 1px solid var(--black);
-        text-align: left;
-    }
-
-    table th {
-        background-color: var(--green);
-        color: var(--white);
-    }
-
-    table tr:nth-child(even) {
-        background-color: var(--black);
-    }
-
 /* Form Styles (Contact Us Page) */
 form {
     max-width: 500px;
@@ -178,18 +152,18 @@ form {
         margin-bottom: 15px;
         border: 1px solid var(--black);
         border-radius: 5px;
-        background-color: var(--black);
-        color: var(--white);
+        background-color: var (--black);
+        color: var (--white);
     }
 
         form input:focus, form textarea:focus {
             outline: none;
-            border-color: var(--green);
+            border-color: var (--green);
         }
 
     form button {
-        background-color: var(--green);
-        color: var(--white);
+        background-color: var (--green);
+        color: var (--white);
         font-size: 1em;
         border: none;
         cursor: pointer;
@@ -297,7 +271,6 @@ form {
     transform: scale(1.4); /* Add a slightly larger zoom effect on hover if desired */
 }
 
-
 special-footer {
     display: flex;
     flex-direction: column;
@@ -327,7 +300,6 @@ special-footer {
         #social-nav a:hover {
             text-decoration: underline;
         }
-
 
 #contact-page {
     display: flex;
@@ -366,49 +338,27 @@ special-footer {
             color: var(--green);
         }
 
-        #contact-page form input, #contact-page form textarea {
-            width: 100%;
-            padding: 10px; /* Ensure padding is consistent */
-            margin-bottom: 15px;
-            border: 1px solid var(--black);
-            border-radius: 5px;
-            background-color: var(--black);
-            color: var(--white);
-            box-sizing: border-box; /* Include padding in element's total width and height */
-        }
+/* Table Styles (Gig History) */
+#gig-history-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: var(--white);
+}
 
-            #contact-page form input:focus, #contact-page form textarea:focus {
-                outline: none;
-                border-color: var(--green);
-            }
-
-        #contact-page form button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: var(--green);
-            color: var(--white);
-            font-size: 1em;
-            cursor: pointer;
-        }
-
-            #contact-page form button:hover {
-                background-color: #005a00;
-            }
-
-    #contact-page .photo-credits {
-        margin-top: 10px;
-        font-size: 0.9em;
-        color: #ccc;
+    #gig-history-table th, #gig-history-table td {
+        padding: 10px;
+        border: 1px solid var(--black);
+        text-align: left;
     }
 
-        #contact-page .photo-credits a {
-            color: #ccc;
-            text-decoration: underline;
-        }
+    #gig-history-table th {
+        background-color: #D42171; /* Pink background for table headers */
+        color: var(--black); /* Black text color */
+    }
 
-            #contact-page .photo-credits a:hover {
-                color: var(--custom-blue);
-            }
+    #gig-history-table tr:nth-child(even) {
+        background-color: var(--black);
+    }
+
+/* Add any additional custom styles you have */

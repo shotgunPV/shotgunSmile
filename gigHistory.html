@@ -4,6 +4,7 @@
     <title>Punkhub - Gig History</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/headerFooterManager.js" defer></script>
+    <script src="assets/js/loadGigHistory.js" defer></script>
 </head>
 <body>
     <special-header></special-header>
@@ -11,11 +12,18 @@
         <img src="assets/images/logoKink.png" alt="Punkhub Logo" id="logo">
         <h1>Gig History</h1>
         <table id="gig-history-table">
-            <tr><th>#</th><th>Date</th><th>Venue</th></tr>
-            <!-- Rows will be populated by JavaScript -->
+            <thead>
+                <tr>
+                    <th>Gig Number</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Gig history will be populated here by JavaScript -->
+            </tbody>
         </table>
     </main>
     <special-footer></special-footer>
-    <script src="assets/js/loadGigHistory.js" defer></script> <!-- Link to the JavaScript file for loading gig history -->
 </body>
 </html>
