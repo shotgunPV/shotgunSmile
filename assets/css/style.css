@@ -296,3 +296,119 @@ form {
 #dave:hover img {
     transform: scale(1.4); /* Add a slightly larger zoom effect on hover if desired */
 }
+
+
+special-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--black); /* Adjust to match your theme */
+}
+
+    special-footer p {
+        margin: 0;
+        color: var(--white);
+    }
+
+#social-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    #social-nav a {
+        margin: 0 10px;
+        color: var(--white);
+        text-decoration: none;
+    }
+
+        #social-nav a:hover {
+            text-decoration: underline;
+        }
+
+
+#contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+    #contact-page img#logo {
+        max-width: 50%; /* Ensure logo scales with the viewport */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add some space below the logo */
+    }
+
+    #contact-page img#band-photo {
+        max-width: 50%; /* Reduce the size of the band photo */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px; /* Add some space above the band photo */
+    }
+
+    #contact-page form {
+        max-width: 400px; /* Adjust form width */
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #2e2e2e;
+        border-radius: 10px;
+        border: 1px solid var(--black);
+    }
+
+        #contact-page form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--green);
+        }
+
+        #contact-page form input, #contact-page form textarea {
+            width: 100%;
+            padding: 10px; /* Ensure padding is consistent */
+            margin-bottom: 15px;
+            border: 1px solid var(--black);
+            border-radius: 5px;
+            background-color: var(--black);
+            color: var(--white);
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+            #contact-page form input:focus, #contact-page form textarea:focus {
+                outline: none;
+                border-color: var(--green);
+            }
+
+        #contact-page form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--green);
+            color: var(--white);
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+            #contact-page form button:hover {
+                background-color: #005a00;
+            }
+
+    #contact-page .photo-credits {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #ccc;
+    }
+
+        #contact-page .photo-credits a {
+            color: #ccc;
+            text-decoration: underline;
+        }
+
+            #contact-page .photo-credits a:hover {
+                color: var(--custom-blue);
+            }

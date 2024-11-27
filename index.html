@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punkhub - Home</title>
-    <script> document.addEventListener("DOMContentLoaded", function () 
-        { fetch('footer.html').then(response => response.text()).then(data => 
-        { document.getElementById('footer').innerHTML = data; }); }); </script>
-
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/resizeLogo.js" defer></script> <!-- Reference the new script -->
+    <script src="assets/js/headerFooterManager.js" defer></script>
+    <script src="assets/js/loadUpcomingGigs.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>Welcome to the Punkhub!</h1>
-        <p>Portsmouth's #1 punk band, coming soon to a saloon near you!</p>
-        <img src="assets/images/logoCut.png" alt="Punkhub Logo" id="logo">
-    </header>
+    <special-header></special-header>
     <main>
+        <img src="assets/images/logoCut.png" alt="Punkhub Logo" id="logo">
+        <h1>Welcome to Punkhub!</h1>
+        <p>Portsmouth's #1 punk band, coming soon to a saloon near you!</p>
         <section id="intro">
-            <h2>Next Gig</h2>
-            <p>Join us at The Admiral Drake</p>
-            <p>Dec 9th 4:30pm, 2024!</p>
+            <div id="next-gig-details">Loading next gig...</div>
         </section>
-        <p>Punkhub! Proudly serving the best punk in Portsmouth to the best pubs in Portsmouth</p>
-        <div id="footer"></div>
     </main>
-
+    <special-footer></special-footer>
 </body>
-
 </html>
