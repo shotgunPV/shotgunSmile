@@ -365,25 +365,25 @@ special-footer {
 
 
 /* Table Styles (Song List) */
-#songsTable-table {
+#songsTable {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
     color: var(--white);
 }
 
-    #songsTable-table th, #songsTable-table td {
+    #songsTable th, #songsTable td {
         padding: 10px;
         border: 1px solid var(--black);
         text-align: left;
     }
 
-    #songsTable-table th {
+    #songsTable th {
         background-color: #F3FF06; /* Yellow background for table headers */
         color: var(--black); /* Black text color */
     }
 
-    #songsTable-table tr:nth-child(even) {
+    #songsTable tr:nth-child(even) {
         background-color: var(--black);
     }
 
