@@ -4,6 +4,7 @@
     <title>Punkhub - Songs</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/headerFooterManager.js" defer></script>
+    <script src="assets/js/loadSongs.js" defer></script>
 </head>
 <body>
     <special-header></special-header>
@@ -11,14 +12,17 @@
         <img src="assets/images/LogoChat.png" alt="Punkhub Logo" id="logo">
         <h1>Songs</h1>
         <p>Explore our collection of punk anthems and covers that we play at our gigs.</p>
-        <ul>
-            <li>Blink 182 - All the Small Things</li>
-            <li>Green Day - Basket Case</li>
-            <li>Sex Pistols - Anarchy in the UK</li>
-            <li>The Clash - Should I Stay or Should I Go</li>
-            <li>Dead Kennedys - Holiday in Cambodia</li>
-            <!-- Add more songs as needed -->
-        </ul>
+        <table id="songsTable">
+            <thead>
+                <tr>
+                    <th>Artist</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Songs will be populated here by JavaScript -->
+            </tbody>
+        </table>
     </main>
     <special-footer></special-footer>
 </body>
