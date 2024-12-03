@@ -7,21 +7,29 @@ async function loadSongs() {
         const rows = data.split('\n');
         console.log('Rows:', rows); // Debugging log
 
-        const tableBody = document.querySelector('#songsTable tbody');
+        const artistSongs = {};
         rows.forEach(row => {
             const [artist, title] = row.split(',');
             if (artist && title) {
-                console.log('Artist:', artist, 'Title:', title); // Debugging log
-                const tr = document.createElement('tr');
-                const artistTd = document.createElement('td');
-                const titleTd = document.createElement('td');
-                artistTd.textContent = artist;
-                titleTd.textContent = title;
-                tr.appendChild(artistTd);
-                tr.appendChild(titleTd);
-                tableBody.appendChild(tr);
+                if (!artistSongs[artist]) {
+                    artistSongs[artist] = [];
+                }
+                artistSongs[artist].push(title);
             }
         });
+
+        const tableBody = document.querySelector('#songsTable tbody');
+        for (const artist in artistSongs) {
+            const titles = artistSongs[artist].join(', ');
+            const tr = document.createElement('tr');
+            const artistTd = document.createElement('td');
+            const titleTd = document.createElement('td');
+            artistTd.textContent = artist;
+            titleTd.textContent = titles;
+            tr.appendChild(artistTd);
+            tr.appendChild(titleTd);
+            tableBody.appendChild(tr);
+        }
     } catch (error) {
         console.error('Error loading songs:', error);
     }
