@@ -362,3 +362,29 @@ special-footer {
     }
 
 /* Add any additional custom styles you have */
+
+
+/* Table Styles (Song List) */
+#gig-history-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: var(--white);
+}
+
+    #gig-history-table th, #gig-history-table td {
+        padding: 10px;
+        border: 1px solid var(--black);
+        text-align: left;
+    }
+
+    #gig-history-table th {
+        background-color: #F3FF06; /* Yellow background for table headers */
+        color: var(--black); /* Black text color */
+    }
+
+    #gig-history-table tr:nth-child(even) {
+        background-color: var(--black);
+    }
+
+/* Add any additional custom styles you have */
