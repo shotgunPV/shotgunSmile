@@ -36,3 +36,18 @@ class SpecialFooter extends HTMLElement {
 
 customElements.define('special-header', SpecialHeader);
 customElements.define('special-footer', SpecialFooter);
+
+// Existing header and footer management code...
+
+// Burger menu functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('nav');
+
+    if (burgerMenu && navMenu) {
+        burgerMenu.addEventListener('click', function() {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+});
