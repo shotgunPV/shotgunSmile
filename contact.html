@@ -10,6 +10,7 @@
     <title>Punkhub - Contact Us</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/headerFooterManager.js" defer></script>
+    <script src="assets/js/snow.js"></script>
 </head>
 <body>
     <special-header></special-header>
@@ -18,23 +19,128 @@
         <h1>Contact Us</h1>
         <h2>"It's alright to tell me, what you think about me"</h2>
         <h3>Dammit - Blink 182</h3>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+        <!-- Collapsible Form 1: Say Hello -->
+        <button type="button" class="collapsible">👋 Say Hello or Ask a Question</button>
+        <div class="content">
+            <form id="helloForm" action="https://formspree.io/f/xnnqyobw" method="POST">
+                <label for="hello-email">Your email:</label>
+                <input type="email" id="hello-email" name="email" placeholder="Your email address" requireds>
+                <input type="hidden" name="_redirect" value="https://punkhub.co.uk/thank-you.html" />
+                <label for="hello-message">Your message:</label>
+                <textarea id="hello-message" name="message" rows="4" placeholder="What would you like to say?" required></textarea>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="helloSuccessMessage" style="display: none; color: green;">
+                🎉 Your message has been sent successfully! Thank you.
+            </div>
+        </div>
 
-            <button type="submit">Send Message</button>
-        </form>
+        <!-- Collapsible Form 2: Booking Inquiry -->
+        <button type="button" class="collapsible">🎸 Book Us for a Gig</button>
+        <div class="content">
+            <form id="bookingForm" action="https://formspree.io/f/mqakogdr" method="POST">
+                <label for="booking-email">Your email:</label>
+                <input type="email" id="booking-email" name="email" placeholder="Your email address" required>
+                <input type="hidden" name="_redirect" value="https://punkhub.co.uk/thank-you.html" />
+                <label for="booking-name">Your name:</label>
+                <input type="text" id="booking-name" name="name" placeholder="Your full name" required>
+
+                <label for="booking-venue">Where is your venue?</label>
+                <input type="text" id="booking-venue" name="venue" placeholder="Venue name or location" required>
+
+                <label for="booking-date">When would you like us to perform?</label>
+                <input type="date" id="booking-date" name="event-date" required>
+
+                <label for="booking-details">Anything else?</label>
+                <textarea id="booking-details" name="additional-details" rows="4" placeholder="Tell us about the event" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <div id="bookingSuccessMessage" style="display: none; color: green;">
+                🎉 Your booking inquiry has been sent successfully! Thank you.
+            </div>
+        </div>
+
+        <!-- Obfuscate email and phone number -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var emailLink = document.getElementById("email-link");
+                emailLink.href = "mailto:" + "hello" + "@" + "punkhub" + "." + "co.uk";
+                emailLink.innerHTML = "hello" + "@" + "punkhub" + "." + "co.uk";
+                
+                var phoneLink = document.getElementById("phone-link");
+                phoneLink.href = "tel:+447854768984";
+                phoneLink.innerHTML = "+44 7854768984";
+            });
+        </script>
+
+<!-- Update the HTML to use these IDs -->
+<button type="button" class="collapsible">📞 Our Contact Details</button>
+<div class="content">
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a id="email-link" href="#">Email</a></li>
+        <li style="margin-bottom: 0.5rem;"><strong>Phone:</strong> <a id="phone-link" href="#">Phone</a></li>
+        <li style="margin-bottom: 0.5rem;"><strong>WhatsApp:</strong> <a href="https://wa.me/447854768984" target="_blank">Chat with us on WhatsApp</a></li>
+    </ul>
+</div>
+
+
+        <!-- Band Photo -->
         <img src="assets/images/wholeBand.jpg" alt="Whole Band Photo" id="band-photo">
         <div class="photo-credits">
-            Thanks again, <a href="https://www.instagram.com/lilyyorkphotography?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">Lily</a>
+            Thanks again, <a href="https://www.instagram.com/lilyyorkphotography" target="_blank">Lily</a>
         </div>
     </main>
-    <special-footer></special-footer>
+
+    <!-- Collapsible Script -->
+    <script>
+        const collapsibles = document.querySelectorAll('.collapsible');
+        collapsibles.forEach(button => {
+            button.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        async function handleSubmit(event, formId, successMessageId) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = document.getElementById(formId);
+            const formData = new FormData(form);
+
+            // Disable the submit button to prevent accidental resends
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+
+                if (response.ok) {
+                    // Hide the form and display a success message
+                    form.style.display = "none";
+                    document.getElementById(successMessageId).style.display = "block";
+                } else {
+                    alert("Oops! There was a problem submitting your form.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An unexpected error occurred.");
+            } finally {
+                submitButton.disabled = false;
+            }
+        }
+
+        document.getElementById("helloForm").addEventListener("submit", (event) => handleSubmit(event, 'helloForm', 'helloSuccessMessage'));
+        document.getElementById("bookingForm").addEventListener("submit", (event) => handleSubmit(event, 'bookingForm', 'bookingSuccessMessage'));
+    </script>
 </body>
+<special-footer></special-footer>
 </html>

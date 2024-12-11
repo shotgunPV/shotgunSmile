@@ -151,44 +151,6 @@ section h2 {
 	color: var(--green);
 	font-size: 2em;
 }
-/* Form Styles (Contact Us Page) */
-form {
-	max-width: 500px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #2e2e2e;
-	border-radius: 10px;
-	border: 1px solid var(--black);
-}
-form label {
-	display: block;
-	font-weight: bold;
-	margin-bottom: 5px;
-	color: var(--green);
-}
-form input, form textarea, form button {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 15px;
-	border: 1px solid var(--black);
-	border-radius: 5px;
-	background-color: var (--black);
-	color: var (--white);
-}
-form input:focus, form textarea:focus {
-	outline: none;
-	border-color: var (--green);
-}
-form button {
-	background-color: var (--green);
-	color: var (--white);
-	font-size: 1em;
-	border: none;
-	cursor: pointer;
-}
-form button:hover {
-	background-color: #005a00;
-}
 /* Adjust spacing for the sections */
 #next-gig {
 	margin-bottom: 20px;
@@ -311,45 +273,6 @@ special-footer p {
 }
 #social-nav a:hover {
 	text-decoration: underline;
-}
-#contact-page {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	padding: 20px;
-}
-#contact-page img#logo {
-	max-width: 50%;
-	/* Ensure logo scales with the viewport */
-	height: auto;
-	/* Maintain aspect ratio */
-	margin-bottom: 20px;
-	/* Add some space below the logo */
-}
-#contact-page img#band-photo {
-	max-width: 50%;
-	/* Reduce the size of the band photo */
-	height: auto;
-	/* Maintain aspect ratio */
-	margin-top: 20px;
-	/* Add some space above the band photo */
-}
-#contact-page form {
-	max-width: 400px;
-	/* Adjust form width */
-	width: 100%;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #2e2e2e;
-	border-radius: 10px;
-	border: 1px solid var(--black);
-}
-#contact-page form label {
-	display: block;
-	font-weight: bold;
-	margin-bottom: 5px;
-	color: var(--green);
 }
 /* Table Styles (Gig History) */
 #gig-history-table {
@@ -533,3 +456,202 @@ a {
 		color: var(--green);
 		text-decoration: underline;
 	}
+
+	/* Fix Collapsible Buttons */
+.collapsible {
+    background-color: var(--green);
+    color: var(--black);
+    cursor: pointer;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible:hover {
+    background-color: #007a3d; /* Slightly darker green for hover */
+}
+
+/* Collapsible Content Container */
+.content {
+    padding: 1rem;
+    display: none;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    background-color: #2e2e2e; /* Dark grey background */
+    margin-bottom: 1rem;
+    transition: max-height 0.3s ease;
+}
+
+/* Form Container Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form fields */
+    padding: 20px;
+    background-color: #333; /* Form background */
+    border-radius: 8px;
+    border: 1px solid var(--green);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto; /* Center the form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    font-weight: bold;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #00d870; /* Brighter green for focus */
+    box-shadow: 0 0 5px rgba(0, 216, 112, 0.5);
+}
+
+form button {
+    padding: 0.75rem;
+    background-color: var(--green);
+    color: var(--black);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #007a3d; /* Slightly darker green on hover */
+}
+
+/* Responsive Form Adjustments */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    form button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
+#contact-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+}
+
+#contact-page img#band-photo {
+	height: auto;
+	/* Maintain aspect ratio */
+	width: 100%;
+	/* Ensure it scales relative to its parent container */
+	max-width: 50em;
+	/* A relative unit to ensure scaling */
+	margin: 5px 0;
+	margin-top: 20px;
+	/* Add some space above the band photo */
+}
+#contact-page form {
+	max-width: auto;
+	/* Adjust form width */
+	width: auto;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #2e2e2e;
+	border-radius: 10px;
+	border: 1px solid var(--black);
+}
+#contact-page form label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: var(--green);
+}
+
+/* Snowflake styles */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    pointer-events: none;
+    color: white;
+    font-size: 1em;
+    user-select: none;
+    display: inline-block;
+    animation: fall linear infinite, drift ease-in-out infinite;
+}
+
+/* Different types of snowflakes for variety */
+.snowflake:nth-child(3n) {
+    font-size: 1.5em;
+    animation-duration: 8s, 3s;
+}
+
+.snowflake:nth-child(5n) {
+    font-size: 2em;
+    animation-duration: 6s, 2s;
+}
+
+.snowflake:nth-child(7n) {
+    font-size: 1.2em;
+    animation-duration: 10s, 4s;
+}
+
+.snowflake:nth-child(9n) {
+    font-size: 0.8em;
+    animation-duration: 12s, 5s;
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+/* Drifting animation */
+@keyframes drift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+/* Santa style */
+.santa {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    animation: moveSanta 20s linear infinite;
+}
+
+@keyframes moveSanta {
+    0% { right: -20%; }
+    100% { right: 100%; }
+}
