@@ -25,10 +25,10 @@
         <div class="content">
             <form id="helloForm" action="https://formspree.io/f/xnnqyobw" method="POST">
                 <label for="hello-email">Your email:</label>
-                <input type="email" id="hello-email" name="email" placeholder="Your email address" requireds>
+                <input type="email" id="hello-email" name="email" placeholder="Your email address" maxlength="256" required>
                 <input type="hidden" name="_redirect" value="https://punkhub.co.uk/thank-you.html" />
                 <label for="hello-message">Your message:</label>
-                <textarea id="hello-message" name="message" rows="4" placeholder="What would you like to say?" required></textarea>
+                <textarea id="hello-message" name="message" rows="4" placeholder="What would you like to say?" maxlength="1000"></textarea>
 
                 <button type="submit">Send</button>
             </form>
@@ -37,26 +37,27 @@
             </div>
         </div>
 
-        <!-- Collapsible Form 2: Booking Inquiry -->
-        <button type="button" class="collapsible">🎸 Book Us for a Gig</button>
-        <div class="content">
-            <form id="bookingForm" action="https://formspree.io/f/mqakogdr" method="POST">
-                <label for="booking-email">Your email:</label>
-                <input type="email" id="booking-email" name="email" placeholder="Your email address" required>
-                <input type="hidden" name="_redirect" value="https://punkhub.co.uk/thank-you.html" />
-                <label for="booking-name">Your name:</label>
-                <input type="text" id="booking-name" name="name" placeholder="Your full name" required>
-
-                <label for="booking-venue">Where is your venue?</label>
-                <input type="text" id="booking-venue" name="venue" placeholder="Venue name or location" required>
-
-                <label for="booking-date">When would you like us to perform?</label>
-                <input type="date" id="booking-date" name="event-date" required>
-
-                <label for="booking-details">Anything else?</label>
-                <textarea id="booking-details" name="additional-details" rows="4" placeholder="Tell us about the event" required></textarea>
-
-                <button type="submit">Send</button>
+<!-- Collapsible Form 2: Booking Inquiry -->
+<button type="button" class="collapsible">🎸 Book Us for a Gig</button>
+<div class="content">
+    <form id="bookingForm" action="https://formspree.io/f/mqakogdr" method="POST">
+        <label for="booking-email">Your email:</label>
+        <input type="email" id="booking-email" name="email" placeholder="Your email address" maxlength="256" required>
+        <input type="hidden" name="_redirect" value="https://punkhub.co.uk/thank-you.html" /> 
+        <label for="booking-name">Your name:</label>  
+        <input type="text" id="booking-name" name="name" placeholder="Your full name" maxlength="256" required>
+        <label for="booking-venue">Where is your venue?</label>
+        <input type="text" id="booking-venue" name="venue" placeholder="Venue name or location" maxlength="256" required>
+        <label for="booking-date">When would you like us to perform?</label>
+        <input type="date" id="booking-date" name="event-date" maxlength="8" required>
+        <label for="booking-details">Anything else?</label>
+        <textarea id="booking-details" name="additional-details" rows="4" placeholder="Tell us about the event" maxlength="1000" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <div id="bookingSuccessMessage" style="display: none; color: green;">
+        🎉 Your booking inquiry has been sent successfully! Thank you.
+    </div>
+</div>
             </form>
             <div id="bookingSuccessMessage" style="display: none; color: green;">
                 🎉 Your booking inquiry has been sent successfully! Thank you.
