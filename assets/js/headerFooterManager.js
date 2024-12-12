@@ -20,11 +20,6 @@ class SpecialHeader extends HTMLElement {
             <a href="comingUp.html">Upcoming Gigs</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-        <div class="share-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://punkhub.co.uk" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=https://punkhub.co.uk" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:?subject=Check out Punkhub!&body=Visit Punkhub at https://punkhub.co.uk"><i class="fas fa-envelope"></i></a>
-        </div>
         `;
     }
 }
@@ -34,18 +29,17 @@ class SpecialFooter extends HTMLElement {
         this.innerHTML = `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-            .fa-facebook, .fa-youtube, .fa-soundcloud, .fa-twitter, .fa-envelope {
+            .fa-facebook, .fa-youtube, .fa-soundcloud, .fa-envelope {
                 font-size: 200%;
                 margin: 0 10px;
             }
         </style>
         <p>Punkhub! Proudly performing the best punk in Portsmouth, for the best pubs in Portsmouth!</p>
+        <P>Check out our content and socials below</p>
         <nav id="social-nav">
             <a href="https://www.facebook.com/people/Punkhub/100093279042809/?_rdr" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.youtube.com/playlist?list=PL5YYo0Ot8TXMCwemoJ1bxqQpMlxPWKFyG" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://soundcloud.com/punkhub/sets/punkhub-demo-recordings-2024" target="_blank"><i class="fab fa-soundcloud"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=https://punkhub.co.uk" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:?subject=Check out Punkhub!&body=Visit Punkhub at https://punkhub.co.uk"><i class="fas fa-envelope"></i></a>
         </nav>
         `;
     }
