@@ -11,28 +11,34 @@
 	--orange: #FF5500;
 	/* SoundCloud orange */
 }
+
 /* Social Media Icon Styles */
 .fa-facebook {
 	color: #3b5998;
 	/* Facebook blue */
 }
+
 .fa-youtube {
 	color: #ff0000;
 	/* YouTube red */
 }
+
 .fa-soundcloud {
 	color: #ff5500;
 	/* SoundCloud orange */
 }
+
 #social-nav a {
 	text-decoration: none;
 	margin: 0 10px;
 	font-size: 1.2em;
 	transition: color 0.3s ease;
 }
+
 #social-nav a:hover {
 	text-decoration: underline;
 }
+
 /* Global Styles */
 body {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
@@ -42,11 +48,20 @@ body {
 	color: var(--white);
 	line-height: 1.6;
 }
+
 /* Additional Styles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 700;
 }
-p, a, li {
+
+p,
+a,
+li {
 	font-weight: 300;
 }
 
@@ -56,18 +71,23 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 10px; /* Reduce padding */
-	background-color: #333; /* Adjust background color as needed */
+	padding: 10px;
+	/* Reduce padding */
+	background-color: #333;
+	/* Adjust background color as needed */
 	color: var(--white);
 }
-	header h1 {
+
+header h1 {
 	font-size: 2.5em;
 	margin: 10px 0;
 }
+
 header p {
 	font-size: 1.2em;
 	margin: 5px 0 20px;
 }
+
 /* Logo Styles */
 #logo {
 	height: auto;
@@ -78,6 +98,7 @@ header p {
 	/* A relative unit to ensure scaling */
 	margin: 5px 0;
 }
+
 /* Main Navigation Styles */
 #main-nav {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -88,15 +109,18 @@ header p {
 	/* Add space between main and social nav */
 	text-align: center;
 }
+
 #main-nav a {
 	color: var(--white);
 	text-decoration: none;
 	margin: 0 10px;
 	font-size: 1.2em;
 }
+
 #main-nav a:hover {
 	color: var(--green);
 }
+
 /* Social Navigation Styles */
 #social-nav {
 	display: flex;
@@ -107,20 +131,25 @@ header p {
 	/* Semi-transparent background */
 	margin-bottom: 20px;
 }
+
 #social-nav a {
 	text-decoration: none;
 	margin: 0 10px;
 	font-size: 1.2em;
 }
+
 #social-nav a[href*="facebook"] {
 	color: var(--blue);
 }
+
 #social-nav a[href*="youtube"] {
 	color: var(--red);
 }
+
 #social-nav a[href*="soundcloud"] {
 	color: var(--orange);
 }
+
 /* Footer Styles */
 footer {
 	display: flex;
@@ -129,16 +158,19 @@ footer {
 	padding: 20px;
 	background-color: var(--black);
 }
+
 #footer-logo {
 	width: 100px;
 	height: auto;
 	margin: 0 10px;
 }
+
 /* Section Styles */
 main {
 	padding: 5px;
 	text-align: center;
 }
+
 section {
 	margin-bottom: 30px;
 	padding: 10px;
@@ -147,60 +179,77 @@ section {
 	/* Slightly lighter grey */
 	border-radius: 10px;
 }
+
 section h2 {
 	color: var(--green);
 	font-size: 2em;
 }
+
 /* Adjust spacing for the sections */
 #next-gig {
 	margin-bottom: 20px;
 	/* Adjust this value as needed */
 }
+
 #future-gigs {
 	margin-top: 1px;
 	/* Reduce the margin above Future Gigs */
 }
+
 /* Responsive Styles for Mobile */
 @media (max-width: 600px) {
 	header h1 {
 		font-size: 2em;
 		padding: 10px;
 	}
+
 	header p {
 		font-size: 1em;
 		padding: 5px;
 	}
+
 	#main-nav a {
 		margin: 0 5px;
 		font-size: 1em;
 	}
+
 	#social-nav a {
 		margin: 0 5px;
 		font-size: 1em;
 	}
+
 	section {
 		padding: 15px;
 		margin-bottom: 20px;
 	}
+
 	section h2 {
 		font-size: 1.5em;
 	}
-	table th, table td {
+
+	table th,
+	table td {
 		padding: 8px;
 		font-size: 0.9em;
 	}
+
 	form {
 		padding: 15px;
 	}
-	form input, form textarea, form button {
+
+	form input,
+	form textarea,
+	form button {
 		padding: 8px;
 		font-size: 0.9em;
 	}
+
 	#footer-logo {
 		width: 80px;
 		/* Adjust width for smaller screens */
 	}
 }
+
 /* Band Members Grid */
 .band-container {
 	display: grid;
@@ -212,6 +261,7 @@ section h2 {
 	max-width: 500px;
 	/* Adjust as needed */
 }
+
 .band-member {
 	width: 150px;
 	height: 150px;
@@ -221,6 +271,7 @@ section h2 {
 	transition: transform 0.2s;
 	text-align: center;
 }
+
 .band-member img {
 	width: 100%;
 	height: 100%;
@@ -228,15 +279,18 @@ section h2 {
 	object-position: top;
 	/* Adjust the cropping to show more of the faces */
 }
+
 .band-member:hover {
 	transform: scale(1.45);
 }
+
 .band-member h3 {
 	color: var(--white);
 	margin-top: 10px;
 	font-size: 1em;
 	text-align: center;
 }
+
 /* Specific adjustment for Dave's image */
 #dave img {
 	object-position: center top;
@@ -244,10 +298,12 @@ section h2 {
 	transform: scale(1.8);
 	/* Zoom in on Dave's image */
 }
+
 #dave:hover img {
 	transform: scale(1.4);
 	/* Add a slightly larger zoom effect on hover if desired */
 }
+
 special-footer {
 	display: flex;
 	flex-direction: column;
@@ -257,23 +313,28 @@ special-footer {
 	background-color: var(--black);
 	/* Adjust to match your theme */
 }
+
 special-footer p {
 	margin: 0;
 	color: var(--white);
 }
+
 #social-nav {
 	display: flex;
 	justify-content: center;
 	margin-top: 10px;
 }
+
 #social-nav a {
 	margin: 0 10px;
 	color: var(--white);
 	text-decoration: none;
 }
+
 #social-nav a:hover {
 	text-decoration: underline;
 }
+
 /* Table Styles (Gig History) */
 #gig-history-table {
 	width: 90%;
@@ -281,20 +342,25 @@ special-footer p {
 	border-collapse: collapse;
 	color: var(--white);
 }
-#gig-history-table th, #gig-history-table td {
+
+#gig-history-table th,
+#gig-history-table td {
 	padding: 10px;
 	border: 1px solid var(--black);
 	text-align: left;
 }
+
 #gig-history-table th {
 	background-color: #D42171;
 	/* Pink background for table headers */
 	color: var(--black);
 	/* Black text color */
 }
+
 #gig-history-table tr:nth-child(even) {
 	background-color: var(--black);
 }
+
 /* Add any additional custom styles you have */
 /* Table Styles (Song List) */
 #songsTable {
@@ -303,77 +369,98 @@ special-footer p {
 	border-collapse: collapse;
 	color: var(--white);
 }
-#songsTable th, #songsTable td {
+
+#songsTable th,
+#songsTable td {
 	padding: 10px;
 	border: 1px solid var(--black);
 	text-align: left;
 }
+
 #songsTable th {
 	background-color: #F3FF06;
 	/* Yellow background for table headers */
 	color: var(--black);
 	/* Black text color */
 }
+
 #songsTable tr:nth-child(even) {
 	background-color: var(--black);
 }
+
 /*BURGER*/
 /* Main Navigation Styles */
 #main-nav {
-	background-color: #d3d3d3; /* Light grey background */
+	background-color: #d3d3d3;
+	/* Light grey background */
 	padding: 10px;
 	border-radius: 5px;
 	margin: 0;
 	text-align: left;
-	width: 100%; /* Full width on larger screens */
-	position: static; /* Default position */
+	width: 100%;
+	/* Full width on larger screens */
+	position: static;
+	/* Default position */
 	display: flex;
-	justify-content: center; /* Center links on larger screens */
+	justify-content: center;
+	/* Center links on larger screens */
 }
 
-	#main-nav a {
-		color: var(--black); /* Black text color */
-		text-decoration: none;
-		margin: 0 10px;
-		font-size: 1em;
-		font-weight: bold;
-		padding: 10px 0; /* Add padding to increase spacing between links */
-	}
+#main-nav a {
+	color: var(--black);
+	/* Black text color */
+	text-decoration: none;
+	margin: 0 10px;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 10px 0;
+	/* Add padding to increase spacing between links */
+}
 
 /* Burger Menu Styles */
 .burger-container {
-	display: none; /* Hide burger container by default */
+	display: float;
+	/* Hide burger container by default */
 }
 
 .burger-menu {
 	font-size: 24px;
-	padding: 5px; /* Reduce padding */
+	padding: 5px;
+	/* Reduce padding */
 	color: var(--white);
-	cursor: default; /* Remove cursor pointer */
+	cursor: default;
+	/* Remove cursor pointer */
+	z-index: 9999;
+	/* Increase z-index */
+	position: relative;
+	/* Ensure it stays on top */
 }
 
-	.burger-menu span {
-		display: block;
-		width: 25px;
-		height: 3px;
-		background-color: var(--white);
-		margin: 3px 0; /* Reduce margin */
-		transition: all 0.3s ease;
-	}
+.burger-menu span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: var(--white);
+	margin: 3px 0;
+	/* Reduce margin */
+	transition: all 0.3s ease;
+}
 
-	.burger-menu.active span:nth-child(1) {
-		transform: rotate(45deg);
-		top: 5px; /* Adjust top position */
-	}
+.burger-menu.active span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 5px;
+	/* Adjust top position */
+}
 
-	.burger-menu.active span:nth-child(2) {
-		opacity: 0;
-	}
+.burger-menu.active span:nth-child(2) {
+	opacity: 0;
+}
 
-	.burger-menu.active span:nth-child(3) {
-		transform: rotate(-45deg);
-		top: -5px; /* Adjust top position */
-	}
+.burger-menu.active span:nth-child(3) {
+	transform: rotate(-45deg);
+	top: -5px;
+	/* Adjust top position */
+}
 
 /* "Tap Here" text */
 .tap-here {
@@ -381,70 +468,93 @@ special-footer p {
 	margin-left: 10px;
 	font-size: 1em;
 	font-weight: bold;
-	display: none; /* Initially hide "Tap Here" */
+	display: none;
+	/* Initially hide "Tap Here" */
 }
 
 @media (max-width: 768px) {
 	.burger-container {
-		display: flex; /* Show burger container on smaller screens */
+		display: flex;
+		/* Show burger container on smaller screens */
 		align-items: center;
-		position: fixed; /* Keep burger container fixed */
+		position: fixed;
+		/* Keep burger container fixed */
 		top: 10px;
 		left: 10px;
-		z-index: 1001; /* Ensure it stays above the main menu */
+		z-index: 1001;
+		/* Ensure it stays above the main menu */
 	}
 
 	.tap-here {
-		display: inline-block; /* Show "Tap Here" on smaller screens */
-		margin-top: 40px; /* Adjust this value to position it below the burger menu */
+		display: inline-block;
+		/* Show "Tap Here" on smaller screens */
+		margin-top: 40px;
+		/* Adjust this value to position it below the burger menu */
 	}
 
 	#main-nav {
-		display: none; /* Hide main nav on smaller screens */
+		display: none;
+		/* Hide main nav on smaller screens */
 		flex-direction: column;
 		align-items: flex-start;
-		position: fixed; /* Fixed position for mobile menu */
+		position: fixed;
+		/* Fixed position for mobile menu */
 		top: 0;
 		left: 0;
-		height: 100%; /* Full height of the viewport */
-		width: 125px; /* Reduced width to half */
-		z-index: 1000; /* Ensure it stays above other elements */
-		overflow-y: auto; /* Allow scrolling within the menu */
-		padding: 20px; /* Add padding to the navigation container */
-		outline: none; /* Hide flashing cursor */
+		height: 100%;
+		/* Full height of the viewport */
+		width: 125px;
+		/* Reduced width to half */
+		z-index: 1000;
+		/* Ensure it stays above other elements */
+		overflow-y: auto;
+		/* Allow scrolling within the menu */
+		padding: 20px;
+		/* Add padding to the navigation container */
+		outline: none;
+		/* Hide flashing cursor */
 	}
 
-		#main-nav.active {
-			display: flex;
-		}
+	#main-nav.active {
+		display: flex;
+	}
 
-		#main-nav a {
-			padding: 15px 0; /* Increase padding for burger menu links */
-		}
+	#main-nav a {
+		padding: 15px 0;
+		/* Increase padding for burger menu links */
+	}
 
-	body.menu-open { /* Prevent body scroll when menu is open */
+	body.menu-open {
+		/* Prevent body scroll when menu is open */
 		overflow: hidden;
 	}
 }
 
 @media (min-width: 769px) {
 	.burger-menu {
-		display: none; /* Hide burger menu on larger screens */
+		display: none;
+		/* Hide burger menu on larger screens */
 	}
 
 	.tap-here {
-		display: none; /* Hide "Tap Here" on larger screens */
+		display: none;
+		/* Hide "Tap Here" on larger screens */
 	}
 
 	#main-nav {
-		display: flex; /* Show main nav on larger screens */
+		display: flex;
+		/* Show main nav on larger screens */
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		position: static; /* Reset position */
-		width: auto; /* Reset width */
-		height: auto; /* Reset height */
-		overflow: visible; /* Reset overflow */
+		position: static;
+		/* Reset position */
+		width: auto;
+		/* Reset width */
+		height: auto;
+		/* Reset height */
+		overflow: visible;
+		/* Reset overflow */
 	}
 }
 
@@ -452,114 +562,122 @@ a {
 	transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-	a:hover {
-		color: var(--green);
-		text-decoration: underline;
-	}
+a:hover {
+	color: var(--green);
+	text-decoration: underline;
+}
 
-	/* Fix Collapsible Buttons */
+/* Fix Collapsible Buttons */
 .collapsible {
-    background-color: var(--green);
-    color: var(--black);
-    cursor: pointer;
-    padding: 1rem;
-    text-align: left;
-    border: none;
-    outline: none;
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+	background-color: var(--green);
+	color: var(--black);
+	cursor: pointer;
+	padding: 1rem;
+	text-align: left;
+	border: none;
+	outline: none;
+	font-size: 1.2rem;
+	margin: 1rem 0;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
 }
 
 .collapsible:hover {
-    background-color: #007a3d; /* Slightly darker green for hover */
+	background-color: #007a3d;
+	/* Slightly darker green for hover */
 }
 
 /* Collapsible Content Container */
 .content {
-    padding: 1rem;
-    display: none;
-    border: 1px solid var(--green);
-    border-radius: 5px;
-    background-color: #2e2e2e; /* Dark grey background */
-    margin-bottom: 1rem;
-    transition: max-height 0.3s ease;
+	padding: 1rem;
+	display: none;
+	border: 1px solid var(--green);
+	border-radius: 5px;
+	background-color: #2e2e2e;
+	/* Dark grey background */
+	margin-bottom: 1rem;
+	transition: max-height 0.3s ease;
 }
 
 /* Form Container Styling */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Space between form fields */
-    padding: 20px;
-    background-color: #333; /* Form background */
-    border-radius: 8px;
-    border: 1px solid var(--green);
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto; /* Center the form */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	/* Space between form fields */
+	padding: 20px;
+	background-color: #333;
+	/* Form background */
+	border-radius: 8px;
+	border: 1px solid var(--green);
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	/* Center the form */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 form label {
-    font-weight: bold;
-    color: var(--green);
-    margin-bottom: 0.5rem;
+	font-weight: bold;
+	color: var(--green);
+	margin-bottom: 0.5rem;
 }
 
 form input,
 form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    color: var(--white);
-    background-color: var(--black);
-    border: 1px solid var(--green);
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
+	width: 100%;
+	padding: 0.75rem;
+	font-size: 1rem;
+	color: var(--white);
+	background-color: var(--black);
+	border: 1px solid var(--green);
+	border-radius: 5px;
+	outline: none;
+	transition: border-color 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-    border-color: #00d870; /* Brighter green for focus */
-    box-shadow: 0 0 5px rgba(0, 216, 112, 0.5);
+	border-color: #00d870;
+	/* Brighter green for focus */
+	box-shadow: 0 0 5px rgba(0, 216, 112, 0.5);
 }
 
 form button {
-    padding: 0.75rem;
-    background-color: var(--green);
-    color: var(--black);
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	padding: 0.75rem;
+	background-color: var(--green);
+	color: var(--black);
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #007a3d; /* Slightly darker green on hover */
+	background-color: #007a3d;
+	/* Slightly darker green on hover */
 }
 
 /* Responsive Form Adjustments */
 @media (max-width: 600px) {
-    form {
-        padding: 15px;
-    }
+	form {
+		padding: 15px;
+	}
 
-    form input,
-    form textarea {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
+	form input,
+	form textarea {
+		font-size: 0.9rem;
+		padding: 0.5rem;
+	}
 
-    form button {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
+	form button {
+		font-size: 0.9rem;
+		padding: 0.5rem;
+	}
 }
+
 #contact-page {
 	display: flex;
 	flex-direction: column;
@@ -579,6 +697,7 @@ form button:hover {
 	margin-top: 20px;
 	/* Add some space above the band photo */
 }
+
 #contact-page form {
 	max-width: auto;
 	/* Adjust form width */
@@ -589,6 +708,7 @@ form button:hover {
 	border-radius: 10px;
 	border: 1px solid var(--black);
 }
+
 #contact-page form label {
 	display: block;
 	font-weight: bold;
@@ -598,60 +718,80 @@ form button:hover {
 
 /* Snowflake styles */
 .snowflake {
-    position: fixed;
-    top: -10px;
-    z-index: 9999;
-    pointer-events: none;
-    color: white;
-    font-size: 1em;
-    user-select: none;
-    display: inline-block;
-    animation: fall linear infinite, drift ease-in-out infinite;
+	position: fixed;
+	top: -10px;
+	z-index: 9700;
+	/* Lower z-index */
+	pointer-events: none;
+	color: white;
+	font-size: 1em;
+	user-select: none;
+	display: inline-block;
+	animation: fall linear infinite, drift ease-in-out infinite;
 }
 
 /* Different types of snowflakes for variety */
 .snowflake:nth-child(3n) {
-    font-size: 1.5em;
-    animation-duration: 8s, 3s;
+	font-size: 1.5em;
+	animation-duration: 8s, 3s;
 }
 
 .snowflake:nth-child(5n) {
-    font-size: 2em;
-    animation-duration: 6s, 2s;
+	font-size: 2em;
+	animation-duration: 6s, 2s;
 }
 
 .snowflake:nth-child(7n) {
-    font-size: 1.2em;
-    animation-duration: 10s, 4s;
+	font-size: 1.2em;
+	animation-duration: 10s, 4s;
 }
 
 .snowflake:nth-child(9n) {
-    font-size: 0.8em;
-    animation-duration: 12s, 5s;
+	font-size: 0.8em;
+	animation-duration: 12s, 5s;
 }
 
 /* Falling animation */
 @keyframes fall {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(100vh);
+	}
 }
 
 /* Drifting animation */
 @keyframes drift {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(20px); }
-    100% { transform: translateX(0); }
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(20px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
+
 /* Santa style */
 .santa {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 15%;
-    animation: moveSanta 20s linear infinite;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 15%;
+	animation: moveSanta 20s linear infinite;
 }
 
 @keyframes moveSanta {
-    0% { right: -20%; }
-    100% { right: 100%; }
+	0% {
+		right: -20%;
+	}
+
+	100% {
+		right: 100%;
+	}
 }

@@ -29,13 +29,23 @@ class SpecialFooter extends HTMLElement {
         this.innerHTML = `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-            .fa-facebook, .fa-youtube, .fa-soundcloud, .fa-envelope {
+            .fa-facebook, .fa-youtube, .fa-soundcloud, .fa-twitter, .fa-envelope {
                 font-size: 200%;
                 margin: 0 10px;
             }
+            .burger-menu {
+                z-index: 1000; /* Ensures it's above other elements */
+                position: relative; /* Adjusts stacking context */
+            }
+            .burger-menu span {
+                background-color: #00ff00; /* Bright green color */
+                display: block;
+                height: 4px;
+                margin: 6px 0;
+                width: 30px;
+            }
         </style>
         <p>Punkhub! Proudly performing the best punk in Portsmouth, for the best pubs in Portsmouth!</p>
-        <P>Check out our content and socials below</p>
         <nav id="social-nav">
             <a href="https://www.facebook.com/people/Punkhub/100093279042809/?_rdr" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.youtube.com/playlist?list=PL5YYo0Ot8TXMCwemoJ1bxqQpMlxPWKFyG" target="_blank"><i class="fab fa-youtube"></i></a>
